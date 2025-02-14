@@ -122,7 +122,7 @@ const TestAppBarAuthenticated = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="absolute">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -199,7 +199,9 @@ const TestAppBarAuthenticated = () => {
 }
 
 const TestAppBarAnon = () => {
-
+    return <>
+    
+    </>
 
 }
 
@@ -243,7 +245,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-const TestAppBar = () => {
+function TestAppBar(){
     if (IsAuthenticated()) {
         return TestAppBarAuthenticated()
     } else {
